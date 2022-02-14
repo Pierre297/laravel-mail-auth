@@ -10966,3 +10966,21 @@ body {
   text-align: center;
 }
 
+table {
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 100px;
+}
+
+form {
+  margin: 70px 0px;
+}
+
+form label {
+  margin-left: 35px;
+}
+
+.btn-danger {
+  margin: 20px 0px;
+}
+
