@@ -8,11 +8,21 @@ use App\Videogame;
 
 class ApiController extends Controller
 {
-    public function getEvents()
+    public function getVideogames()
     {
 
         $videogames = Videogame::all();
 
         return json_encode($videogames);
+    }
+
+    public function deleteVideogame($id)
+    {
+
+        $videogame = Videogame::findOrFail($id);
+
+        $videogame->delete();
+
+        return redirect()->route('home');
     }
 }

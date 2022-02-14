@@ -3,6 +3,6 @@
 
 <h1>Hello World</h1>
 
-<videogames-component></videogames-component>
+<videogames-component user= "{{ Auth::check() }}"></videogames-component>
     
 @endsection

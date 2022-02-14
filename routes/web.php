@@ -11,4 +11,5 @@ Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('/', 'GuestController@home')->name('home');
 
 // rotte veu
-Route::get('/api/events/list', 'ApiController@getEvents')->name('api.events.list');
+Route::get('/api/videogames/list', 'ApiController@getVideogames')->name('api.videogames.list');
+Route::get('/api/videogame/delete/{id}', 'ApiController@deleteVideogame')->name('api.videogame.delete');
