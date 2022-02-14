@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\VideogameMailDelete;
+
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 use App\Videogame;
 
@@ -23,6 +26,13 @@ class ApiController extends Controller
 
         $videogame->delete();
 
+        $this->sendDeleteMail();
+
         return redirect()->route('home');
+    }
+
+    private function sendDeleteMail()
+    {
+        Mail::to('test@test.com')->send(new VideogameMailDelete());
     }
 }
