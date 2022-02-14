@@ -2,5 +2,7 @@
 @section('content')
 
 <h1>Hello World</h1>
+
+<videogames-component></videogames-component>
     
 @endsection
